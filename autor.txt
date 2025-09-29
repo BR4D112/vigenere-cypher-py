@@ -1,0 +1,13 @@
+Yo, Diego Alejandro Rubiano Buitrago, declaro que la implementación del proyecto de
+cifrado Vigenère fue desarrollada por mí como parte del curso Electiva IV-seguridad informática,
+siguiendo los requerimientos especificados en la guía.
+
+La codificación del metodo de cifrado fue basandose en recursos en linea junto con 
+autoria propia yendo a la par en los requisitos solcitados, la definición del modelo matemático, 
+las decisiones de diseño sobre normalización e índices, así como la redacción del informe técnico,
+fueron realizados de manera autónoma. El uso de herramientas automáticas fueron aplicadas en caso de
+resolución de dudas y refactorizar las pruebas. Los recursos investigados fueron foros en linea
+y videos educativos. 
+
+
+Fecha de publicación: 28/09/2025
