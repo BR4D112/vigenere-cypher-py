@@ -45,13 +45,23 @@ El programa se ejecuta desde la línea de comandos. A continuación, se describe
 
 ### Ejemplos de Uso
 #### Cifrar texto desde un archivo:
+El programa permite usar input y output de archivos, para este caso aplicaremos input.txt y output.txt tal que por ejemplo 
 ```bash
 python3 vigenere_cli.py --mode enc --key CLAVE --in input.txt --out output.txt
 ```
 
 #### Descifrar texto desde la entrada estándar:
+El programa recibe los inputs con archivos o con un pipeline que suma un resultado previo, para ello usamos 
+```bash
+'echo "texto plano"' | python3 vigenere_cli.py --mode enc --key CLAVE
+```
+Ejemplo
 ```bash
 echo "JPLGS" | python3 vigenere_cli.py --mode dec --key CLAVE
+```
+Eso mismo podemos retornarlo en un archivo por ejemplo
+```bash
+echo "HOLAMUNDO" | python3 vigenere_cli.py --mode enc --key CLAVE --out output.txt
 ```
 
 #### Cifrar texto con normalización laxa:
@@ -62,6 +72,11 @@ python3 vigenere_cli.py --mode enc --key CLAVE --in input.txt --normalize lax
 #### Usar un alfabeto personalizado:
 ```bash
 python3 vigenere_cli.py --mode enc --key CLAVE --alpha "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ"
+```
+
+
+```bash
+ python3 vigenere_cli.py --mode enc --key "clave" --in input.txt --out output.txt
 ```
 
 ## Pruebas
@@ -76,8 +91,4 @@ python3 -m unittest vigenere_cypher_test.py
 3. **Alfabeto personalizado**: Si el alfabeto no incluye todos los caracteres necesarios, el resultado puede ser incorrecto.
 
 ## Créditos
-- Implementación: Equipo de Ingeniería de Sistemas, 2025-II.
 - Inspirado en el cifrado clásico de Vigenère.
-
-## Licencia
-Este proyecto es de uso educativo y no tiene licencia específica.
