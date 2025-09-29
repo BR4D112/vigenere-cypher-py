@@ -1,23 +1,11 @@
 def vigenere_cipher(text, key, mode, alphabet='ABCDEFGHIJKLMNOPQRSTUVWXYZ'):
-    """
-    Encrypts or decrypts a text using the Vigenere cipher.
-
-    Args:
-        text: The text to encrypt or decrypt.
-        key: The encryption or decryption key.
-        mode: 'encrypt' or 'decrypt'.
-        alphabet: The alphabet to use.
-
-    Returns:
-        The encrypted or decrypted text.
-    """
     if not key:
-        raise ValueError("Key must not be empty.")
+        raise ValueError("La llave no puede estar vacía.")
     if not key.isalpha():
         
-        raise ValueError("Key must contain only alphabetic characters.")
+        raise ValueError("La llave debe contener solo letras.")
     if mode not in ['encrypt', 'decrypt']:
-        raise ValueError("Mode must be 'encrypt' or 'decrypt'.")
+        raise ValueError("El modo debe ser 'encrypt' o 'decrypt'.")
 
     processed_text = ""
     key_index = 0
